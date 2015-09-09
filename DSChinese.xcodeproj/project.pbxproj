@@ -19,6 +19,10 @@
 		B95188A41B4E6CFF00AB59EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95188A21B4E6CFF00AB59EB /* LaunchScreen.xib */; };
 		B95188B01B4E6D0000AB59EB /* DSChineseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95188AF1B4E6D0000AB59EB /* DSChineseTests.swift */; };
 		B95188BC1B4E6EB600AB59EB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95188BB1B4E6EB600AB59EB /* MainViewController.swift */; };
+		B98E83761B9E719900C52191 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E83751B9E719900C52191 /* SettingViewController.swift */; };
+		B98E83781B9E7E1800C52191 /* HZTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E83771B9E7E1800C52191 /* HZTColor.swift */; };
+		B98E837A1B9E817B00C52191 /* HZTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E83791B9E817B00C52191 /* HZTButton.swift */; };
+		B9C0FCC21B9E68D20057DA5F /* dic in Resources */ = {isa = PBXBuildFile; fileRef = B9C0FCC11B9E68D20057DA5F /* dic */; };
 		B9FAAB691B7DEFAF00D19FA5 /* testDic in Resources */ = {isa = PBXBuildFile; fileRef = B9FAAB681B7DEFAF00D19FA5 /* testDic */; };
 		F98790A4F730362470E58D92 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE55A430EBD56D0F922532D1 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -53,6 +57,11 @@
 		B95188AF1B4E6D0000AB59EB /* DSChineseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSChineseTests.swift; sourceTree = "<group>"; };
 		B95188B91B4E6D3B00AB59EB /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		B95188BB1B4E6EB600AB59EB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B98E83751B9E719900C52191 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B98E83771B9E7E1800C52191 /* HZTColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZTColor.swift; sourceTree = "<group>"; };
+		B98E83791B9E817B00C52191 /* HZTButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZTButton.swift; sourceTree = "<group>"; };
+		B9C0FCC01B9D8F170057DA5F /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
+		B9C0FCC11B9E68D20057DA5F /* dic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dic; sourceTree = "<group>"; };
 		B9FAAB681B7DEFAF00D19FA5 /* testDic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testDic; sourceTree = "<group>"; };
 		EE55A430EBD56D0F922532D1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				B95188BB1B4E6EB600AB59EB /* MainViewController.swift */,
+				B98E83751B9E719900C52191 /* SettingViewController.swift */,
+				B98E83791B9E817B00C52191 /* HZTButton.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -125,8 +136,8 @@
 		B95188961B4E6CFF00AB59EB /* DSChinese */ = {
 			isa = PBXGroup;
 			children = (
-				B96632DC1B7DE7F700FE3242 /* Func */,
 				B95188991B4E6CFF00AB59EB /* AppDelegate.swift */,
+				B96632DC1B7DE7F700FE3242 /* Func */,
 				B92638BD1B9D249400FAFF7A /* ViewController */,
 				B95188A01B4E6CFF00AB59EB /* Images.xcassets */,
 				B95188A21B4E6CFF00AB59EB /* LaunchScreen.xib */,
@@ -138,7 +149,9 @@
 		B95188971B4E6CFF00AB59EB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B9C0FCC01B9D8F170057DA5F /* BridgeHeader.h */,
 				B95188981B4E6CFF00AB59EB /* Info.plist */,
+				B9C0FCC11B9E68D20057DA5F /* dic */,
 				B9FAAB681B7DEFAF00D19FA5 /* testDic */,
 			);
 			name = "Supporting Files";
@@ -171,6 +184,7 @@
 				B92BFDF11B9D2119006D782B /* CWSIndex.swift */,
 				B92BFDF21B9D2119006D782B /* CWSTrie.swift */,
 				B92BFDF31B9D2119006D782B /* CWSMain.swift */,
+				B98E83771B9E7E1800C52191 /* HZTColor.swift */,
 			);
 			name = Func;
 			sourceTree = "<group>";
@@ -262,6 +276,7 @@
 				B9FAAB691B7DEFAF00D19FA5 /* testDic in Resources */,
 				B95188A41B4E6CFF00AB59EB /* LaunchScreen.xib in Resources */,
 				B95188A11B4E6CFF00AB59EB /* Images.xcassets in Resources */,
+				B9C0FCC21B9E68D20057DA5F /* dic in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,12 +342,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B98E837A1B9E817B00C52191 /* HZTButton.swift in Sources */,
 				B951889A1B4E6CFF00AB59EB /* AppDelegate.swift in Sources */,
 				B92BFDF91B9D2119006D782B /* CWSTrie.swift in Sources */,
 				B92BFDFA1B9D2119006D782B /* CWSMain.swift in Sources */,
 				B92BFDF81B9D2119006D782B /* CWSIndex.swift in Sources */,
 				B92BFDF41B9D2119006D782B /* CWSCharacter.swift in Sources */,
+				B98E83761B9E719900C52191 /* SettingViewController.swift in Sources */,
 				B92BFDF71B9D2119006D782B /* CWSFirstCharNode.swift in Sources */,
+				B98E83781B9E7E1800C52191 /* HZTColor.swift in Sources */,
 				B95188BC1B4E6EB600AB59EB /* MainViewController.swift in Sources */,
 				B92BFDF51B9D2119006D782B /* CWSContent.swift in Sources */,
 				B92BFDF61B9D2119006D782B /* CWSDictionary.swift in Sources */,
@@ -471,6 +489,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = DSChinese/BridgeHeader.h;
 			};
 			name = Debug;
 		};
@@ -495,6 +514,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = DSChinese/BridgeHeader.h;
 			};
 			name = Release;
 		};

@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var mainViewCtrl = MainViewController()
         var navCtrl = UINavigationController()
         navCtrl.viewControllers = [mainViewCtrl]
+        navCtrl.navigationBar.tintColor = UIColor.green()
         self.window!.rootViewController = navCtrl
         return true
     }

@@ -1,10 +1,13 @@
 PODS:
+  - MONActivityIndicatorView (0.0.3)
   - SnapKit (0.13.0)
 
 DEPENDENCIES:
+  - MONActivityIndicatorView
   - SnapKit (~> 0.13.0)
 
 SPEC CHECKSUMS:
+  MONActivityIndicatorView: a00611695de16d956b17d03be25ee49a8effc5f2
   SnapKit: 69fe274c71511df89a5591c11437a8b826bfa9eb
 
 COCOAPODS: 0.37.2

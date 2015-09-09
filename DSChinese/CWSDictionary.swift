@@ -70,6 +70,7 @@ class CWSDictionary {
     }
     
     func loadDic() {
+        fullDic = [:]
         let fullString = CWSDictionary.readDicFile()
         var fullArray = fullString.componentsSeparatedByString("\n")
         for wordStr in fullArray {

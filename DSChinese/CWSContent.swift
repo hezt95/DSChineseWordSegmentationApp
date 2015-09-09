@@ -33,6 +33,8 @@ class CWSContent {
     }
     
     func loadFiles() {
+        id = [String]()
+        indexDic = [:]
         let filemanager:NSFileManager = NSFileManager()
         let files = filemanager.enumeratorAtPath(contentFilePath)
         while let file: AnyObject = files?.nextObject() {

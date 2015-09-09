@@ -8,7 +8,7 @@
 
 import Foundation
 let contentFilePath = "/Users/hezitong/Projects/DSCurriculumDesign/codes/contents/"
-let dicFileURL = NSURL(fileURLWithPath: "/Users/hezitong/Projects/DSCurriculumDesign/codes/dic")!
+let dicFileURL = NSURL(fileURLWithPath: NSBundle.mainBundle().bundlePath + "/dic")!
 let contentFileURL = NSURL(fileURLWithPath: contentFilePath)!
 //func main() {
 //    var dic = CWSDictionary()
