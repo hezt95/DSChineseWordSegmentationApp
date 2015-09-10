@@ -8,12 +8,23 @@
 
 import UIKit
 
-var htmlURL: NSURL?
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController,UIWebViewDelegate {
+    var htmlURL: NSURL?
+    let webView = UIWebView()
+    init(url: NSURL){
+        htmlURL  = url
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let webView = UIWebView()
+        webView.delegate = self
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Up", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("backBarBtnDidSelect"))
         self.view.addSubview(webView)
         webView.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(self.view)
@@ -23,9 +34,32 @@ class WebViewController: UIViewController {
         }
         let req = NSURLRequest(URL: htmlURL!)
         webView.loadRequest(req)
-        // Do any additional setup after loading the view.
     }
-
+    
+    func backBarBtnDidSelect() {
+        if webView.canGoBack {
+            webView.goBack()
+        } else {
+            self.navigationController!.popToRootViewControllerAnimated(true)
+        }
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        let title = webView.stringByEvaluatingJavaScriptFromString("document.title")
+        self.title = title
+    }
+    
+    func webViewDidStartLoad(webView: UIWebView) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        let title = "Loading"
+        self.title = title
+    }
+    
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
+        let alartView = UIAlertView(title: "Connection Error", message: "Cannot load the web", delegate: nil, cancelButtonTitle: "OK")
+        alartView.show()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

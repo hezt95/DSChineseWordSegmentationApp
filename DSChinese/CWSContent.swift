@@ -25,6 +25,7 @@ class CWSContent {
             var content = loadContent(item)
             self.segmentContent(dic, content: content, with: item)
         }
+
     }
     
     init() {

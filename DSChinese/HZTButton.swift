@@ -24,11 +24,11 @@ class HZTButton: UIButton {
             make.width.equalTo(btnWidth)
         }
         self.setTitle(title, forState: UIControlState.Normal)
-        self.setTitleColor(UIColor.green(), forState: UIControlState.Normal)
+        self.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         self.titleLabel?.font = UIFont(name: "HelveticaNeue-Medium", size: 25)
         self.layer.cornerRadius = CGFloat(btnHeight / 2)
         self.layer.borderWidth = 1.5
-        self.layer.borderColor = UIColor.green().CGColor
+        self.layer.borderColor = UIColor.blackColor().CGColor
     }
     
     init() {

@@ -31,13 +31,12 @@ class SettingViewController: UIViewController, MONActivityIndicatorViewDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.yellow()
         self.title = "Setting"
         
         let btnLocationVBase = self.view.frame.height / 2 - 80 //the 4 target's base vertical location'
         let btnLocationVInterval = 70
         loadDicBtn = HZTButton(parentView: self.view, locationV: Double(btnLocationVBase), title: "Load Dictionary")
-        downloadBtn = HZTButton(parentView: self.view, locationV: Double(btnLocationVBase + CGFloat(btnLocationVInterval)), title: "Download Contents")
+        downloadBtn = HZTButton(parentView: self.view, locationV: Double(btnLocationVBase + CGFloat(btnLocationVInterval)), title: "Load Contents")
         testBtn = HZTButton(parentView: self.view, locationV: Double(btnLocationVBase + CGFloat(btnLocationVInterval * 2)), title: "Test")
         test2Btn = HZTButton(parentView: self.view, locationV: Double(btnLocationVBase + CGFloat(btnLocationVInterval) * 3), title: "Test")
         loadDicBtn.addTarget(self, action: Selector("loadDicBtnDidSelect"), forControlEvents: UIControlEvents.TouchDown)
@@ -113,14 +112,18 @@ class SettingViewController: UIViewController, MONActivityIndicatorViewDelegate 
                 self.testBtn.enabled = true
                 self.test2Btn.enabled = true
                 self.navigationItem.hidesBackButton = false
+                var indexStr = String()
                 for (hash, index) in content.indexDic {
-                    println("\(hash): \(index.key)")
+                    indexStr = indexStr + "\(hash): \(index.key)\n"
                     for item in index.id {
-                        print(item)
-                        print(" ")
+                        indexStr = indexStr + item + " "
                     }
-                    print("\n")
+                    indexStr = indexStr + "\n"
                 }
+                print(indexStr)
+                //save to file
+                var error: NSErrorPointer = nil
+                indexStr.writeToFile(indexSavePath, atomically: true, encoding: NSUTF8StringEncoding, error: error)
                 self.indicatorView.stopAnimating()
             })
         })

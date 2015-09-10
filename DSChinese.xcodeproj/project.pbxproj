@@ -15,6 +15,9 @@
 		B92BFDF91B9D2119006D782B /* CWSTrie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFDF21B9D2119006D782B /* CWSTrie.swift */; };
 		B92BFDFA1B9D2119006D782B /* CWSMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFDF31B9D2119006D782B /* CWSMain.swift */; };
 		B94EECA41BA1501A00B0C1FA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94EECA31BA1501A00B0C1FA /* WebViewController.swift */; };
+		B94EECA61BA1578D00B0C1FA /* 093836216e2a in Resources */ = {isa = PBXBuildFile; fileRef = B94EECA51BA1578D00B0C1FA /* 093836216e2a */; };
+		B94EECAA1BA1DB4700B0C1FA /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94EECA91BA1DB4700B0C1FA /* ResultTableViewController.swift */; };
+		B94EECAC1BA1E70300B0C1FA /* NewMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94EECAB1BA1E70300B0C1FA /* NewMainTableViewController.swift */; };
 		B951889A1B4E6CFF00AB59EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95188991B4E6CFF00AB59EB /* AppDelegate.swift */; };
 		B95188A11B4E6CFF00AB59EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95188A01B4E6CFF00AB59EB /* Images.xcassets */; };
 		B95188A41B4E6CFF00AB59EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95188A21B4E6CFF00AB59EB /* LaunchScreen.xib */; };
@@ -49,6 +52,9 @@
 		B92BFDF21B9D2119006D782B /* CWSTrie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWSTrie.swift; sourceTree = "<group>"; };
 		B92BFDF31B9D2119006D782B /* CWSMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWSMain.swift; sourceTree = "<group>"; };
 		B94EECA31BA1501A00B0C1FA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B94EECA51BA1578D00B0C1FA /* 093836216e2a */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 093836216e2a; sourceTree = "<group>"; };
+		B94EECA91BA1DB4700B0C1FA /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		B94EECAB1BA1E70300B0C1FA /* NewMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMainTableViewController.swift; sourceTree = "<group>"; };
 		B95188941B4E6CFF00AB59EB /* DSChinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSChinese.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95188981B4E6CFF00AB59EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B95188991B4E6CFF00AB59EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				B95A9A371B9FD9AD00A0C584 /* MainTableViewController.swift */,
+				B94EECAB1BA1E70300B0C1FA /* NewMainTableViewController.swift */,
+				B94EECA91BA1DB4700B0C1FA /* ResultTableViewController.swift */,
 				B94EECA31BA1501A00B0C1FA /* WebViewController.swift */,
 				B98E83751B9E719900C52191 /* SettingViewController.swift */,
 				B98E83791B9E817B00C52191 /* HZTButton.swift */,
@@ -140,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				B95188991B4E6CFF00AB59EB /* AppDelegate.swift */,
+				B92BFDF31B9D2119006D782B /* CWSMain.swift */,
 				B96632DC1B7DE7F700FE3242 /* Func */,
 				B92638BD1B9D249400FAFF7A /* ViewController */,
 				B95188A01B4E6CFF00AB59EB /* Images.xcassets */,
@@ -152,6 +161,7 @@
 		B95188971B4E6CFF00AB59EB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B94EECA51BA1578D00B0C1FA /* 093836216e2a */,
 				B9C0FCC01B9D8F170057DA5F /* BridgeHeader.h */,
 				B95188981B4E6CFF00AB59EB /* Info.plist */,
 				B97F6FA11BA1300A00CBE325 /* Dictionary */,
@@ -185,7 +195,6 @@
 				B92BFDF01B9D2119006D782B /* CWSFirstCharNode.swift */,
 				B92BFDF11B9D2119006D782B /* CWSIndex.swift */,
 				B92BFDF21B9D2119006D782B /* CWSTrie.swift */,
-				B92BFDF31B9D2119006D782B /* CWSMain.swift */,
 				B98E83771B9E7E1800C52191 /* HZTColor.swift */,
 			);
 			name = Func;
@@ -286,6 +295,7 @@
 			files = (
 				B9FAAB691B7DEFAF00D19FA5 /* testDic in Resources */,
 				B95188A41B4E6CFF00AB59EB /* LaunchScreen.xib in Resources */,
+				B94EECA61BA1578D00B0C1FA /* 093836216e2a in Resources */,
 				B95188A11B4E6CFF00AB59EB /* Images.xcassets in Resources */,
 				B9C0FCC21B9E68D20057DA5F /* dic in Resources */,
 			);
@@ -357,6 +367,7 @@
 				B95A9A381B9FD9AD00A0C584 /* MainTableViewController.swift in Sources */,
 				B951889A1B4E6CFF00AB59EB /* AppDelegate.swift in Sources */,
 				B92BFDF91B9D2119006D782B /* CWSTrie.swift in Sources */,
+				B94EECAA1BA1DB4700B0C1FA /* ResultTableViewController.swift in Sources */,
 				B92BFDFA1B9D2119006D782B /* CWSMain.swift in Sources */,
 				B92BFDF81B9D2119006D782B /* CWSIndex.swift in Sources */,
 				B92BFDF41B9D2119006D782B /* CWSCharacter.swift in Sources */,
@@ -366,6 +377,7 @@
 				B92BFDF51B9D2119006D782B /* CWSContent.swift in Sources */,
 				B94EECA41BA1501A00B0C1FA /* WebViewController.swift in Sources */,
 				B92BFDF61B9D2119006D782B /* CWSDictionary.swift in Sources */,
+				B94EECAC1BA1E70300B0C1FA /* NewMainTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

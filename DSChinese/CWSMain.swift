@@ -8,22 +8,10 @@
 
 import Foundation
 let contentFilePath = "/Users/hezitong/Projects/DSCurriculumDesign/codes/contents_/"
+//let contentFilePath = NSBundle.mainBundle().bundlePath + "/093836216e2a"
 let dicFileURL = NSURL(fileURLWithPath: NSBundle.mainBundle().bundlePath + "/testDic")!
 let contentFileURL = NSURL(fileURLWithPath: contentFilePath)!
-//func main() {
-//    var dic = CWSDictionary()
-//    var content = CWSContent(dic: dic)
-//    for (hash, index) in content.indexDic {
-//        println("\(hash): \(index.key)")
-//        for item in index.id {
-//            print(item)
-//            print(" ")
-//        }
-//        print("\n")
-//    }
-////    system("say Mission Complete")
-//}
-//
-//main()
-
+let indexSavePath = "/Users/hezitong/Projects/DSCurriculumDesign/codes/indexSaveFile"
+var dic = CWSDictionary()
+var content = CWSContent()
 
