@@ -58,11 +58,73 @@ class NewMainTableViewController: UITableViewController, UISearchResultsUpdating
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         displayData.removeAll(keepCapacity: false)
         let searchStr = searchCtrl.searchBar.text
-        let searchTextHash = CWSContent.hash(searchStr)
-        var searchArr = content.indexDic[searchTextHash]?.id
-        if searchArr != nil {
-            self.displayData = searchArr!
+        enum Operator {
+            case And
+            case Or
+            case Nothing
         }
+        var op = Operator.Nothing
+        for char in searchStr {
+            if char == Character("|") {
+                op = Operator.Or
+            }
+            if char == Character("&") {
+                op = Operator.And
+            }
+        }
+        switch op {
+        case .And:
+            var searchStrArr = searchStr.componentsSeparatedByString("&")
+            var searchSetArr = [Set<String>]()
+            for item in searchStrArr {
+                let searchTextHash = CWSContent.hash(item)
+                var searchArr = content.indexDic[searchTextHash]?.id
+                if searchArr != nil {
+                    searchSetArr.append(Set(searchArr!))
+                } else {
+                    self.displayData = Array()
+                    self.tableView.reloadData()
+                    return
+                }
+            }
+            var searchSet = Set<String>()
+            for var i = 0; i < searchSetArr.count; i++ {
+                if i == 0 {
+                    searchSet = searchSetArr[i]
+                } else {
+                    searchSet.intersect(searchSetArr[i])
+                }
+            }
+            self.displayData = Array(searchSet)
+
+        case .Or:
+            var searchStrArr = searchStr.componentsSeparatedByString("|")
+            var searchSetArr = [Set<String>]()
+            for item in searchStrArr {
+                let searchTextHash = CWSContent.hash(item)
+                var searchArr = content.indexDic[searchTextHash]?.id
+                if searchArr != nil {
+                    searchSetArr.append(Set(searchArr!))
+                }
+            }
+            var searchSet = Set<String>()
+            for var i = 0; i < searchSetArr.count; i++ {
+                if i == 0 {
+                    searchSet = searchSetArr[i]
+                } else {
+                    searchSet.union(searchSetArr[i])
+                }
+            }
+            self.displayData = Array(searchSet)
+        case .Nothing:
+            let searchTextHash = CWSContent.hash(searchStr)
+            var searchArr = content.indexDic[searchTextHash]?.id
+            if searchArr != nil {
+                self.displayData = searchArr!
+            }
+        }
+        
+        
         self.tableView.reloadData()
     }
     
@@ -100,16 +162,19 @@ class NewMainTableViewController: UITableViewController, UISearchResultsUpdating
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("mainCell") as! UITableViewCell!
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "mainCell")
+            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "mainCell")
         }
-        cell.textLabel!.text = displayData[indexPath.row]
+        cell.detailTextLabel!.text = "http://www.jianshu.com/p/" + displayData[indexPath.row]
+        let filePath = contentFilePath + displayData[indexPath.row]
+        let data = NSData(contentsOfFile: filePath)
+        cell.textLabel!.text = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String!
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-                let htmlURL = NSURL(string: "http://www.jianshu.com/p/" + displayData[indexPath.row])
-                var webViewCtrl = WebViewController(url: htmlURL!)
-                self.navigationController!.pushViewController(webViewCtrl, animated: true)
+            let htmlURL = NSURL(string: "http://www.jianshu.com/p/" + displayData[indexPath.row])
+            var webViewCtrl = WebViewController(url: htmlURL!)
+            self.navigationController!.pushViewController(webViewCtrl, animated: true)
     }
     
     /*
