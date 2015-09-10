@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
-        var mainViewCtrl = MainViewController()
+        var mainViewCtrl = MainTableViewController()
         var navCtrl = UINavigationController()
         navCtrl.viewControllers = [mainViewCtrl]
         navCtrl.navigationBar.tintColor = UIColor.green()

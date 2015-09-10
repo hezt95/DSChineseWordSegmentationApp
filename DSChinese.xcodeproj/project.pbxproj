@@ -14,11 +14,12 @@
 		B92BFDF81B9D2119006D782B /* CWSIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFDF11B9D2119006D782B /* CWSIndex.swift */; };
 		B92BFDF91B9D2119006D782B /* CWSTrie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFDF21B9D2119006D782B /* CWSTrie.swift */; };
 		B92BFDFA1B9D2119006D782B /* CWSMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFDF31B9D2119006D782B /* CWSMain.swift */; };
+		B94EECA41BA1501A00B0C1FA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94EECA31BA1501A00B0C1FA /* WebViewController.swift */; };
 		B951889A1B4E6CFF00AB59EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95188991B4E6CFF00AB59EB /* AppDelegate.swift */; };
 		B95188A11B4E6CFF00AB59EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95188A01B4E6CFF00AB59EB /* Images.xcassets */; };
 		B95188A41B4E6CFF00AB59EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95188A21B4E6CFF00AB59EB /* LaunchScreen.xib */; };
 		B95188B01B4E6D0000AB59EB /* DSChineseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95188AF1B4E6D0000AB59EB /* DSChineseTests.swift */; };
-		B95188BC1B4E6EB600AB59EB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95188BB1B4E6EB600AB59EB /* MainViewController.swift */; };
+		B95A9A381B9FD9AD00A0C584 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95A9A371B9FD9AD00A0C584 /* MainTableViewController.swift */; };
 		B98E83761B9E719900C52191 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E83751B9E719900C52191 /* SettingViewController.swift */; };
 		B98E83781B9E7E1800C52191 /* HZTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E83771B9E7E1800C52191 /* HZTColor.swift */; };
 		B98E837A1B9E817B00C52191 /* HZTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E83791B9E817B00C52191 /* HZTButton.swift */; };
@@ -47,6 +48,7 @@
 		B92BFDF11B9D2119006D782B /* CWSIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWSIndex.swift; sourceTree = "<group>"; };
 		B92BFDF21B9D2119006D782B /* CWSTrie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWSTrie.swift; sourceTree = "<group>"; };
 		B92BFDF31B9D2119006D782B /* CWSMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWSMain.swift; sourceTree = "<group>"; };
+		B94EECA31BA1501A00B0C1FA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B95188941B4E6CFF00AB59EB /* DSChinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSChinese.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95188981B4E6CFF00AB59EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B95188991B4E6CFF00AB59EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		B95188AE1B4E6D0000AB59EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B95188AF1B4E6D0000AB59EB /* DSChineseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSChineseTests.swift; sourceTree = "<group>"; };
 		B95188B91B4E6D3B00AB59EB /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
-		B95188BB1B4E6EB600AB59EB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B95A9A371B9FD9AD00A0C584 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		B98E83751B9E719900C52191 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B98E83771B9E7E1800C52191 /* HZTColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZTColor.swift; sourceTree = "<group>"; };
 		B98E83791B9E817B00C52191 /* HZTButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZTButton.swift; sourceTree = "<group>"; };
@@ -105,7 +107,8 @@
 		B92638BD1B9D249400FAFF7A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B95188BB1B4E6EB600AB59EB /* MainViewController.swift */,
+				B95A9A371B9FD9AD00A0C584 /* MainTableViewController.swift */,
+				B94EECA31BA1501A00B0C1FA /* WebViewController.swift */,
 				B98E83751B9E719900C52191 /* SettingViewController.swift */,
 				B98E83791B9E817B00C52191 /* HZTButton.swift */,
 			);
@@ -151,8 +154,7 @@
 			children = (
 				B9C0FCC01B9D8F170057DA5F /* BridgeHeader.h */,
 				B95188981B4E6CFF00AB59EB /* Info.plist */,
-				B9C0FCC11B9E68D20057DA5F /* dic */,
-				B9FAAB681B7DEFAF00D19FA5 /* testDic */,
+				B97F6FA11BA1300A00CBE325 /* Dictionary */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -187,6 +189,15 @@
 				B98E83771B9E7E1800C52191 /* HZTColor.swift */,
 			);
 			name = Func;
+			sourceTree = "<group>";
+		};
+		B97F6FA11BA1300A00CBE325 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				B9C0FCC11B9E68D20057DA5F /* dic */,
+				B9FAAB681B7DEFAF00D19FA5 /* testDic */,
+			);
+			name = Dictionary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98E837A1B9E817B00C52191 /* HZTButton.swift in Sources */,
+				B95A9A381B9FD9AD00A0C584 /* MainTableViewController.swift in Sources */,
 				B951889A1B4E6CFF00AB59EB /* AppDelegate.swift in Sources */,
 				B92BFDF91B9D2119006D782B /* CWSTrie.swift in Sources */,
 				B92BFDFA1B9D2119006D782B /* CWSMain.swift in Sources */,
@@ -351,8 +363,8 @@
 				B98E83761B9E719900C52191 /* SettingViewController.swift in Sources */,
 				B92BFDF71B9D2119006D782B /* CWSFirstCharNode.swift in Sources */,
 				B98E83781B9E7E1800C52191 /* HZTColor.swift in Sources */,
-				B95188BC1B4E6EB600AB59EB /* MainViewController.swift in Sources */,
 				B92BFDF51B9D2119006D782B /* CWSContent.swift in Sources */,
+				B94EECA41BA1501A00B0C1FA /* WebViewController.swift in Sources */,
 				B92BFDF61B9D2119006D782B /* CWSDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

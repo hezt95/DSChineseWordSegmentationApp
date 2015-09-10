@@ -26,13 +26,14 @@ class HZTButton: UIButton {
         self.setTitle(title, forState: UIControlState.Normal)
         self.setTitleColor(UIColor.green(), forState: UIControlState.Normal)
         self.titleLabel?.font = UIFont(name: "HelveticaNeue-Medium", size: 25)
-        println(self.frame.height)
-        println(self.frame.size.height)
         self.layer.cornerRadius = CGFloat(btnHeight / 2)
         self.layer.borderWidth = 1.5
         self.layer.borderColor = UIColor.green().CGColor
     }
     
+    init() {
+        super.init(frame: CGRectMake(0, 0, 0, 0))
+    }
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
